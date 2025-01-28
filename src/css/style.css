@@ -1,0 +1,293 @@
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    color: black;
+    font-size: 20px;
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #c5c5c5; 
+}
+
+/* HEADER */
+
+.header {
+    position: sticky; /* Закрепление header */
+    top: 0; /* Фиксация у верхней границы */
+    width: 100%;
+    height: 124px;
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Фон, чтобы header выделялся */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Лёгкая тень для визуального отделения */
+    z-index: 1000; /* Приоритет отображения поверх других элементов */
+    display: flex;
+    align-items: center;
+}
+
+.container_header {
+    max-width: 1424px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.menu_item{
+    max-width: auto;
+    max-height: auto;
+    display: flex;
+}
+
+.menu_list{
+    display: flex;
+    align-items: center;
+    gap: 0 72px;
+}
+
+.menu{
+    max-width: 919px;
+    margin-right: 72px;
+    display: flex;
+}
+
+.user_actions{
+    max-width: 90px;
+    gap: 0 8px;
+    margin-right: 72px;
+    display: flex;
+    align-items: center;
+}
+
+.user_actions_item{
+    max-width: auto;
+    max-height: auto;
+    display: flex;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    max-width: 90px;
+}
+
+.search_item{
+    max-width: auto;
+    max-height: auto;
+    display: flex;
+}
+
+.logo{
+    margin-right: 72px;
+}
+
+.logo_item{
+    max-width: auto;
+    max-height: auto;
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.logo_item:hover{
+    transform: scale(1.03);
+}
+
+
+/* TOP OF MAIN */
+
+.top_main {
+    max-width: 886px;
+    max-height: 612px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 137px;
+    margin-top: 100px;
+}
+
+.top_main_text {
+    max-width: 324px;
+    margin: 0;
+}
+
+.top_main_text h1 {
+    white-space: nowrap;
+    font-size: 28px;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 24px;
+    line-height: 1.2;
+    color: #000;
+}
+
+.top_main_text p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    color: #000;
+    text-align: center;
+}
+
+.top_main_text img {
+    width: 225px;
+    height: 76px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 50px;
+    transition: transform 0.3s ease;
+}
+.top_main_text img:hover{
+    transform: scale(1.03);
+}
+
+.top_main_img img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    object-fit: cover;
+}
+
+/* MIDDLE MAIN */
+
+.mid_main {
+    max-width: 100%;
+    margin: 72px auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mid_main_text {
+    font-size: 28px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 24px;
+    color: #000;
+}
+
+.mid_main_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 72px;
+    max-width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.mid_main_content img {
+    max-width: 356px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.mid_main_content img:hover {
+    transform: scale(1.03);
+}
+
+/* BOTTOM MAIN */
+
+.bot_main {
+    max-width: 100%;
+    margin: 72px auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bot_main_text {
+    font-size: 28px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 24px;
+    color: #000;
+}
+
+.bot_main_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 72px;
+    max-width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.bot_main_content img {
+    max-width: 356px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.bot_main_content img:hover {
+    transform: scale(1.03);
+}
+
+/* FOOTER */
+
+.footer {
+    width: 100%;
+    height: 130px;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 70px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container_footer {
+    max-width: 1268px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.faq_item{
+    max-width: auto;
+    max-height: auto;
+    display: flex;
+}
+
+.faq_list{
+    display: flex;
+    align-items: center;
+    gap: 0 72px;
+}
+
+.faq{
+    max-width: 1075px;
+    margin-right: 72px;
+    display: flex;
+}
+
+.social{
+    max-width: 120px;
+    gap: 0 8px;
+    display: flex;
+    align-items: center;
+}
+
+.social_item{
+    max-width: auto;
+    max-height: auto;
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.social_item:hover{
+    transform: scale(1.03);
+}
