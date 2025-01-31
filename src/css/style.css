@@ -33,34 +33,34 @@ body{
 }
 
 .container_header {
-    max-width: 1424px;
+    max-width: 1136px;
     margin: 0 auto;
     display: flex;
     align-items: center;
+    gap: 48px;
 }
 
 .menu_item{
     max-width: auto;
     max-height: auto;
     display: flex;
+    font-size: 20px;
 }
 
 .menu_list{
     display: flex;
     align-items: center;
-    gap: 0 72px;
+    gap: 0 48px;
 }
 
 .menu{
-    max-width: 919px;
-    margin-right: 72px;
+    max-width: 703px;
     display: flex;
 }
 
 .user_actions{
     max-width: 90px;
     gap: 0 8px;
-    margin-right: 72px;
     display: flex;
     align-items: center;
 }
@@ -83,10 +83,6 @@ body{
     display: flex;
 }
 
-.logo{
-    margin-right: 72px;
-}
-
 .logo_item{
     max-width: auto;
     max-height: auto;
@@ -99,11 +95,18 @@ body{
 }
 
 
-/* TOP OF MAIN */
+/* MAIN */
+
+.container {
+    max-width: 1424px;
+    margin: 0 auto;
+}
+
+/* TOP MAIN */
 
 .top_main {
-    max-width: 892px;
-    margin: 100px auto 0;
+    max-width: 900px;
+    margin: 48px auto 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -157,11 +160,11 @@ body{
     object-fit: cover;
 }
 
-/* MIDDLE MAIN */
+/* MID MAIN */
 
 .mid_main {
-    max-width: 100%;
-    margin: 72px auto 0;
+    max-width: 1424px;
+    margin: 48px auto 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -189,8 +192,8 @@ body{
 }
 
 .mid_main_content img {
-    max-width: 356px;
-    height: auto;
+    max-width: auto;
+    max-height: auto;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
@@ -199,11 +202,11 @@ body{
     transform: scale(1.03);
 }
 
-/* BOTTOM MAIN */
+/* BOT MAIN */
 
 .bot_main {
     max-width: 100%;
-    margin: 72px auto 0;
+    margin: 48px auto 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -231,9 +234,8 @@ body{
 }
 
 .bot_main_content img {
-    max-width: 356px;
-    height: auto;
-    object-fit: contain;
+    max-width: auto;
+    max-height: auto;
     transition: transform 0.3s ease;
 }
 
@@ -244,44 +246,43 @@ body{
 /* FOOTER */
 
 .footer {
+    margin-top: 48px;
     width: 100%;
-    height: 130px;
-    margin: 0;
+    height: 124px;
     padding: 0;
     background-color: white;
     display: flex;
     align-items: center;
-    box-sizing: border-box;
-    margin-top: 70px;
 }
 
 .container_footer {
-    max-width: 1268px;
+    max-width: 1136px;
     margin: 0 auto;
     display: flex;
     align-items: center;
+    gap: 48px;
 }
 
 .faq_item{
     max-width: auto;
     max-height: auto;
     display: flex;
+    font-size: 20px;
 }
 
 .faq_list{
     display: flex;
     align-items: center;
-    gap: 0 72px;
+    gap: 0 48px;
 }
 
 .faq{
-    max-width: 1075px;
-    margin-right: 72px;
+    max-width: 961px;
     display: flex;
 }
 
 .social{
-    max-width: 120px;
+    max-width: 125px;
     gap: 0 8px;
     display: flex;
     align-items: center;
