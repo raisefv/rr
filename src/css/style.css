@@ -1,4 +1,4 @@
-a{
+ a{
     text-decoration: none;
     color: inherit;
 }
@@ -19,15 +19,15 @@ body{
 /* HEADER */
 
 .header {
-    position: sticky; /* Закрепление header */
-    top: 0; /* Фиксация у верхней границы */
+    position: sticky;
+    top: 0;
     width: 100%;
     height: 124px;
     margin: 0;
     padding: 0;
-    background-color: white; /* Фон, чтобы header выделялся */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Лёгкая тень для визуального отделения */
-    z-index: 1000; /* Приоритет отображения поверх других элементов */
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
     display: flex;
     align-items: center;
 }
@@ -102,45 +102,48 @@ body{
 /* TOP OF MAIN */
 
 .top_main {
-    max-width: 886px;
-    max-height: 612px;
-    margin: 0 auto;
+    max-width: 892px;
+    margin: 100px auto 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 137px;
-    margin-top: 100px;
 }
 
 .top_main_text {
     max-width: 324px;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
 }
 
 .top_main_text h1 {
     white-space: nowrap;
     font-size: 28px;
-    text-align: center;
+    text-align: left;
     font-weight: 400;
-    margin-bottom: 24px;
     line-height: 1.2;
     color: #000;
 }
 
 .top_main_text p {
     font-size: 20px;
+    max-width: 238px;
     line-height: 1.5;
-    margin-bottom: 24px;
     color: #000;
     text-align: center;
+}
+.top_main_text h1,
+.top_main_text p {
+    margin: 0;
 }
 
 .top_main_text img {
     width: 225px;
     height: 76px;
     display: inline-block;
-    margin-top: 20px;
-    margin-left: 50px;
+    
     transition: transform 0.3s ease;
 }
 .top_main_text img:hover{
@@ -150,7 +153,7 @@ body{
 .top_main_img img {
     width: 100%;
     height: auto;
-    max-width: 500px;
+    max-width: 430px;
     object-fit: cover;
 }
 
@@ -171,16 +174,18 @@ body{
     text-align: center;
     margin-bottom: 24px;
     color: #000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .mid_main_content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 72px;
+    gap: 48px;
     max-width: 100%;
     height: auto;
-    flex-wrap: wrap;
 }
 
 .mid_main_content img {
@@ -211,16 +216,18 @@ body{
     text-align: center;
     margin-bottom: 24px;
     color: #000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .bot_main_content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 72px;
+    gap: 48px;
     max-width: 100%;
     height: auto;
-    flex-wrap: wrap;
 }
 
 .bot_main_content img {
@@ -246,7 +253,6 @@ body{
     align-items: center;
     box-sizing: border-box;
     margin-top: 70px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .container_footer {
@@ -290,4 +296,4 @@ body{
 
 .social_item:hover{
     transform: scale(1.03);
-}
+} 
