@@ -71,19 +71,41 @@ body{
     max-width: auto;
     max-height: auto;
     display: flex;
+    transition: transform 0.3s ease;
+}
+
+.user_actions_item:hover{
+    transform: scale(1.03);
 }
 
 .search{
+    width: 200px;
     display: flex;
     align-items: center;
-    max-width: 90px;
+    position: relative;
 }
 
-.search_item{
-    max-width: auto;
-    max-height: auto;
-    display: flex;
+.search_icon{
+    position: absolute;
+    pointer-events: none;
 }
+
+.search_item {
+    padding: 6px 12px 6px 35px;
+    width: 90px;
+    max-width: 300px;
+    border: none;
+    font-size: 16px;
+    border-radius: 30px;
+    background-color: #c5c5c5;
+    transition: width 0.3s ease-in-out;
+}
+
+.search_item:focus {
+    width: 200px;
+    outline: none;
+}
+
 
 .logo_item{
     max-width: auto;
@@ -139,19 +161,20 @@ body{
     color: #000;
     text-align: center;
 }
+
+.top_main_text_btn{
+    padding: 26px 65px 26px 65px;
+    background-color: #fff;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+}
+
 .top_main_text h1,
 .top_main_text p {
     margin: 0;
 }
 
-.top_main_text img {
-    width: 225px;
-    height: 76px;
-    display: inline-block;
-    
-    transition: transform 0.3s ease;
-}
-.top_main_text img:hover{
+.top_main_text_btn:hover{
     transform: scale(1.03);
 }
 
@@ -302,4 +325,4 @@ body{
 
 .social_item:hover{
     transform: scale(1.03);
-} 
+}
