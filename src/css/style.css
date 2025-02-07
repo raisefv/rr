@@ -42,27 +42,33 @@ body{
     gap: 48px;
 }
 
-.menu_item{
+.menu_item {
     max-width: auto;
     max-height: auto;
     display: flex;
     font-size: 20px;
+    color: #000;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.menu_item:hover {
+    opacity: 1;
+}
+
+.menu_item.not-hovered {
+    opacity: 0.7;
 }
 
 .menu_list{
     display: flex;
     align-items: center;
-    gap: 0 48px;
-}
-
-.menu{
-    max-width: 703px;
-    display: flex;
+    gap: 48px;
 }
 
 .user_actions{
     max-width: 90px;
-    gap: 0 8px;
+    gap: 8px;
     display: flex;
     align-items: center;
 }
@@ -71,11 +77,16 @@ body{
     max-width: auto;
     max-height: auto;
     display: flex;
-    transition: transform 0.3s ease;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+
+    &:hover{
+        opacity: 1;
+    }
 }
 
-.user_actions_item:hover{
-    transform: scale(1.03);
+.user_actions_item.not-hovered{
+    opacity: 0.7;
 }
 
 .search{
@@ -91,33 +102,28 @@ body{
 }
 
 .search_item {
+    font: inherit;
     padding: 6px 12px 6px 35px;
     width: 90px;
     max-width: 300px;
+    max-height: 24px;
     border: none;
     font-size: 16px;
     border-radius: 30px;
-    background-color: #dedede;
+    border: 1.5px solid #000;
+    background-color: #fff;
     transition: width 0.3s ease-in-out;
-}
-
-.search_item:focus {
-    width: 200px;
+    &:focus{
+        width: 200px;
     outline: none;
+    }
 }
-
 
 .logo_item{
     max-width: auto;
     max-height: auto;
     display: flex;
-    transition: transform 0.3s ease;
 }
-
-.logo_item:hover{
-    transform: scale(1.03);
-}
-
 
 /* MAIN */
 
@@ -163,19 +169,21 @@ body{
 }
 
 .top_main_text_btn{
-    padding: 26px 65px 26px 65px;
+    padding: 26px 65px;
     background-color: #fff;
     border-radius: 30px;
-    transition: transform 0.3s ease;
+    font-family: "Alice", serif;
+    font-size: 20px;
+    border: 1.5px solid #000;
+    opacity: 1;
+    &:hover{
+        opacity: 0.7;
+    }
 }
 
 .top_main_text h1,
 .top_main_text p {
     margin: 0;
-}
-
-.top_main_text_btn:hover{
-    transform: scale(1.03);
 }
 
 .top_main_img img {
@@ -221,10 +229,10 @@ body{
     max-height: auto;
     object-fit: contain;
     transition: transform 0.3s ease;
-}
 
-.mid_main_content_item:hover {
-    transform: scale(1.03);
+    &:hover{
+        transform: scale(1.03);
+    }
 }
 
 /* BOT MAIN */
@@ -262,10 +270,9 @@ body{
     max-width: auto;
     max-height: auto;
     transition: transform 0.3s ease;
-}
-
-.bot_main_content_item:hover {
-    transform: scale(1.03);
+    &:hover{
+        transform: scale(1.03);
+    }
 }
 
 /* FOOTER */
@@ -296,6 +303,16 @@ body{
     max-height: auto;
     display: flex;
     font-size: 20px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.faq_item:hover {
+opacity: 1;
+}
+
+.faq_item.not-hovered {
+opacity: 0.7;
 }
 
 .faq_list{
@@ -320,9 +337,4 @@ body{
     max-width: auto;
     max-height: auto;
     display: flex;
-    transition: transform 0.3s ease;
-}
-
-.social_item:hover{
-    transform: scale(1.03);
 }
