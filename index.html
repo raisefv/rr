@@ -6,28 +6,26 @@
     <title>Raise Revolution</title>
     <link rel="stylesheet" href="/src/css/style.css">
     <link rel="stylesheet" href="/src/css/reset.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
     <link rel="icon" href="/src/icons/logox32.svg" type="image/svg+xml">
 </head>
 <body>
 
+    <!--HEADER-->
     <header class="header">
-        <div class="container_header">
-            <div class="logo">
-                <a class="logo_item" href="#" title="Raise Revolution"><img src="/src/icons/logo.svg" alt="Raise Revolution"></a>
-            </div>
+        <section class="container_header">
+            <a class="logo" href="#" title="Raise Revolution">
+                <img src="/src/icons/logo.svg" alt="Raise Revolution">
+            </a>
     
-            <nav class="menu">
-                    <ul class="menu_list">
-                        <li class="menu_item"><a href="#">Новинки</a></li>
-                        <li class="menu_item"><a href="#">Бренды</a></li>
-                        <li class="menu_item"><a href="#">Одежда</a></li>
-                        <li class="menu_item"><a href="#">Обувь</a></li>
-                        <li class="menu_item"><a href="#">Сумки</a></li>
-                        <li class="menu_item"><a href="#">Аксессуары</a></li>
-                    </ul>
+            <nav>
+                <ul class="menu">
+                    <li class="menu_item"><a href="#">Новинки</a></li>
+                    <li class="menu_item"><a href="#">Бренды</a></li>
+                    <li class="menu_item"><a href="#">Одежда</a></li>
+                    <li class="menu_item"><a href="#">Обувь</a></li>
+                    <li class="menu_item"><a href="#">Сумки</a></li>
+                    <li class="menu_item"><a href="#">Аксессуары</a></li>
+                </ul>
             </nav>
     
             <div class="user_actions">
@@ -37,57 +35,99 @@
             </div>
     
             <div class="search" title="Поиск"> 
-                <img class="search_icon" src="/src/icons/search_loop.svg" alt="">
+                <img class="search_icon" src="/src/icons/search_loop.svg" alt="Search">
                 <input class="search_item" type="search" spellcheck="true">
             </div>
     
-        </div>
+        </section>
     </header>
-    
+
+    <!--MAIN-->
     <div class="container">
-        
         <main class="main">
-            <div class="top_main">
-                <div class="top_main_text">
+
+            <!--ПРИВЕТСВЕННАЯ СЕКЦИЯ-->
+            <section class="welcome">
+                <article class="welcome_text">
                     <h1>ПОПУЛЯРНЫЕ БРЕНДЫ</h1>
-                    <p>Собрали подборку <br>из новинок недели моды</p>
-                    <button class="top_main_text_btn">ПЕРЕЙТИ</button>
-                </div>
-                <div class="top_main_img">
+                    <h3>Собрали подборку <br>из новинок недели моды</h3>
+                    <button type="button" class="welcome_btn">ПЕРЕЙТИ</button>
+                </article>
+
+                <article class="welcome_img">
                     <img src="/src/img/runway.svg" alt="Runway">
-                </div>
-            </div>
+                </article>
+            </section>
     
-            <div class="mid_main">
-                <div class="mid_main_text">
-                    <p>Топ продаж</p>
-                </div>
-                <div class="mid_main_content">
-                    <a class="mid_main_content_item" href="#"><img src="/src/img/ramones_shoes.svg" alt=""></a>
-                    <a class="mid_main_content_item" href="#"><img src="/src/img/moon_boot.svg" alt=""></a>
-                    <a class="mid_main_content_item" href="#"><img src="/src/img/alex_thirt.svg" alt=""></a>
-                    <a class="mid_main_content_item" href="#"><img src="/src/img/alyx_jeans.svg" alt=""></a>
-                </div>
-            </div>
-    
-            <div class="bot_main">
-                <div class="bot_main_text">
-                    <p>Актуально</p>
-                </div>
-                <div class="bot_main_content">
-                    <a class="bot_main_content_item" href="#"><img src="/src/img/dsq_puf.svg" alt=""></a>
-                    <a class="bot_main_content_item" href="#"><img src="/src/img/alex_hoodie.svg" alt=""></a>
-                    <a class="bot_main_content_item" href="#"><img src="/src/img/y-3_pants.svg" alt=""></a>
-                    <a class="bot_main_content_item" href="#"><img src="/src/img/balenci_eye.svg" alt=""></a>
-                </div>
+            <!--СЕКЦИЯ "ТОП ПРОДАЖ"-->
+            <section class="top_sale">
+                <h2>Топ продаж</h2>
+                <section class="top_sale_content">
+                    <a href="#">
+                        <article class="product_box">
+                            <img src="/src/img/ramones.svg" alt="product">
+                            <h4>RICK OWENS<br>DRKSHDW Low Sneaks sneakers</h4>
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article class="product_box">
+                            <img src="/src/img/moon_boot.svg" alt="product">
+                            <h4>Moon Boot</h4>
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article class="product_box">
+                            <img src="/src/img/alex_thirt.svg" alt="product">
+                            <h4>Alexander McQueen<br>Dragonfly-print cotton T-shirt</h4>
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article class="product_box">
+                            <img src="/src/img/alyx_jeans.svg" alt="product">
+                            <h4>1017 alyx 9sm<br>distressed skinny jeans</h4>
+                        </article>
+                    </a>
+                </section>
+            </section>
+
+            <!--СЕКЦИЯ "АКТУАЛЬНО"-->
+            <div class="relevant">
+                <h2>Актуально</h2>
+
+                <section class="relevant_content">
+                    <a href="#">
+                        <article class="product_box">
+                            <img src="/src/img/dsq_puf.svg" alt="product">
+                            <h4>DSQUARED2<br>logo-print padded jacket</h4>
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article class="product_box">
+                            <img src="/src/img/alex_hoodie.svg" alt="product">
+                            <h4>Alexander Wang<br>logo-jacquard cotton hoodie</h4>
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article class="product_box">
+                            <img src="/src/img/y-3_pants.svg" alt="product">
+                            <h4>Y-3 x adidas<br>3-Stripes track pants</h4>
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article class="product_box">
+                            <img src="/src/img/balenci_eye.svg" alt="product">
+                            <h4>Balenciaga<br>Eyewear Skin cat</h4>
+                        </article>
+                    </a>
+                </section>
             </div>
     </main>
-
     </div>
-    
+
+    <!--FOOTER-->
     <footer class="footer">
-        <div class="container_footer">
-            <nav class="faq">
+        <section class="container_footer">
+            <nav>
                 <ul class="faq_list">
                     <li class="faq_item"><a href="#">О нас</a></li>
                     <li class="faq_item"><a href="#">Политика конфиденциальности</a></li>
@@ -96,12 +136,13 @@
                 </ul>
             </nav>
             <div class="social">
-                <a class="social_item" href="#"><img src="/src/icons/tg.svg" alt=""></a>
-                <a class="social_item" href="#"><img src="/src/icons/vk.svg" alt=""></a>
-                <a class="social_item" href="#"><img src="/src/icons/whatsapp.svg" alt=""></a>
+                <a class="social_item" href="#" title="telegram"><img src="/src/icons/tg.svg" alt="tg"></a>
+                <a class="social_item" href="#" title="vk"><img src="/src/icons/vk.svg" alt="vk"></a>
+                <a class="social_item" href="#" title="whatsapp"><img src="/src/icons/whatsapp.svg" alt="whatsapp"></a>
             </div>
-        </div>
+        </section>
     </footer>
+    <!--JS Script-->
     <script src="/src/js/script.js"></script>
 </body>
 </html>

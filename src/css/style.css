@@ -1,4 +1,12 @@
- a{
+@font-face {
+    font-family: "Alice";
+    src: url(/src/fonts/Alice-Regular.woff2) format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+a{
     text-decoration: none;
     color: inherit;
 }
@@ -8,12 +16,13 @@ ul{
 }
 
 body{
-    color: black;
+    color: #000;
     font-size: 20px;
     font-family: "Alice", serif;
     font-weight: 400;
     font-style: normal;
     background-color: #dedede; 
+    line-height: 1.2;
 }
 
 /* HEADER */
@@ -23,12 +32,11 @@ body{
     top: 0;
     width: 100%;
     height: 124px;
-    margin: 0;
     padding: 0;
     background-color: white;
     z-index: 1000;
     display: flex;
-    align-items: center;
+    justify-content: center;
     -webkit-box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.25);
     -moz-box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.25);
     box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.25);
@@ -42,51 +50,53 @@ body{
     gap: 48px;
 }
 
-.menu_item {
-    max-width: auto;
-    max-height: auto;
+.logo{
     display: flex;
-    font-size: 20px;
-    color: #000;
-    opacity: 1;
-    transition: opacity 0.3s ease;
+    user-select: none;
 }
 
-.menu_item:hover {
-    opacity: 1;
-}
-
-.menu_item.not-hovered {
-    opacity: 0.7;
-}
-
-.menu_list{
+.menu{
     display: flex;
     align-items: center;
     gap: 48px;
 }
 
+.menu_item {
+    display: flex;
+    font-size: 20px;
+    color: #000;
+    position: relative;
+
+    &::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px; /* Высота подчеркивания */
+    background: #000; /* Цвет подчеркивания */
+    transform: scaleX(0); /* Начальное состояние (не видно) */
+    transition: transform 0.8s ease; /* Плавный переход */
+    }
+
+    &:hover::after{
+        transform: scaleX(1);
+    }   
+}
+
 .user_actions{
-    max-width: 90px;
     gap: 8px;
     display: flex;
     align-items: center;
+    user-select: none;
 }
 
 .user_actions_item{
-    max-width: auto;
-    max-height: auto;
     display: flex;
     opacity: 1;
-    transition: opacity 0.3s ease;
-
     &:hover{
-        opacity: 1;
+        opacity: 0.7;
     }
-}
-
-.user_actions_item.not-hovered{
-    opacity: 0.7;
 }
 
 .search{
@@ -94,35 +104,32 @@ body{
     display: flex;
     align-items: center;
     position: relative;
+    user-select: none;
 }
 
 .search_icon{
     position: absolute;
     pointer-events: none;
+    display: flex;
+    margin:1px 0 0 1px;
 }
 
 .search_item {
     font: inherit;
+    display: flex;
     padding: 6px 12px 6px 35px;
     width: 90px;
-    max-width: 300px;
-    max-height: 24px;
-    border: none;
-    font-size: 16px;
+    max-width: 200px;
+    height: 26px;
+    font-size: 18px;
     border-radius: 30px;
     border: 1.5px solid #000;
     background-color: #fff;
     transition: width 0.3s ease-in-out;
     &:focus{
         width: 200px;
-    outline: none;
+        outline: none;
     }
-}
-
-.logo_item{
-    max-width: auto;
-    max-height: auto;
-    display: flex;
 }
 
 /* MAIN */
@@ -132,9 +139,42 @@ body{
     margin: 0 auto;
 }
 
-/* TOP MAIN */
+.main h2{
+    font-size: 28px;
+    font-weight: 400;
+    color: #000;
+}
 
-.top_main {
+.main h3{
+    font-size: 20px;
+    font-weight: 400;
+    color: #000;
+}
+
+.main h4{
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+}
+
+.product_box {
+    background-color: white;
+    border-radius: 30px;
+    width: 320px;
+    height: 452px;
+    text-align: center; 
+    padding: 0 28px 38px 28px;
+    user-select: none;
+    border: 2px solid transparent;
+    transition: border-color 0.4s ease;
+    &:hover {
+    border-color: #000;
+    }
+}
+
+/* ПРИВЕТСВЕННАЯ СЕКЦИЯ */
+
+.welcome {
     max-width: 900px;
     margin: 48px auto 0;
     display: flex;
@@ -142,7 +182,7 @@ body{
     justify-content: space-between;
 }
 
-.top_main_text {
+.welcome_text {
     max-width: 324px;
     display: flex;
     flex-direction: column;
@@ -151,51 +191,42 @@ body{
     text-align: center;
 }
 
-.top_main_text h1 {
+.welcome_text h1 {
     white-space: nowrap;
     font-size: 28px;
-    text-align: left;
     font-weight: 400;
-    line-height: 1.2;
     color: #000;
 }
 
-.top_main_text p {
-    font-size: 20px;
+.welcome_text h3 {
     max-width: 238px;
-    line-height: 1.5;
-    color: #000;
     text-align: center;
 }
 
-.top_main_text_btn{
+.welcome_btn{
     padding: 26px 65px;
     background-color: #fff;
     border-radius: 30px;
     font-family: "Alice", serif;
     font-size: 20px;
-    border: 1.5px solid #000;
-    opacity: 1;
+    user-select: none;
+    border: 1.5px solid transparent;
+    transition: border-color 0.4s ease;
     &:hover{
-        opacity: 0.7;
+        border-color: #000;
     }
 }
 
-.top_main_text h1,
-.top_main_text p {
-    margin: 0;
-}
-
-.top_main_img img {
+.welcome_img {
     width: 100%;
-    height: auto;
     max-width: 430px;
     object-fit: cover;
+    user-select: none;
 }
 
-/* MID MAIN */
+/* СЕКЦИЯ "ТОП ПРОДАЖ" */
 
-.mid_main {
+.top_sale {
     max-width: 1424px;
     margin: 48px auto 0;
     display: flex;
@@ -204,41 +235,22 @@ body{
     align-items: center;
 }
 
-.mid_main_text {
-    font-size: 28px;
-    font-weight: 400;
+.top_sale h2 {
     text-align: center;
-    margin-bottom: 24px;
-    color: #000;
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.mid_main_content {
+.top_sale_content {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     gap: 48px;
-    max-width: 100%;
-    height: auto;
+    margin-top: 24px;
 }
 
-.mid_main_content_item {
-    max-width: auto;
-    max-height: auto;
-    object-fit: contain;
-    transition: transform 0.3s ease;
+/* СЕКЦИЯ "АКТУАЛЬНО" */
 
-    &:hover{
-        transform: scale(1.03);
-    }
-}
-
-/* BOT MAIN */
-
-.bot_main {
-    max-width: 100%;
+.relevant {
     margin: 48px auto 0;
     display: flex;
     flex-direction: column;
@@ -246,33 +258,17 @@ body{
     align-items: center;
 }
 
-.bot_main_text {
-    font-size: 28px;
-    font-weight: 400;
+.relevant h2 {
     text-align: center;
-    margin-bottom: 24px;
-    color: #000;
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.bot_main_content {
+.relevant_content {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     gap: 48px;
-    max-width: 100%;
-    height: auto;
-}
-
-.bot_main_content_item {
-    max-width: auto;
-    max-height: auto;
-    transition: transform 0.3s ease;
-    &:hover{
-        transform: scale(1.03);
-    }
+    margin-top: 24px;
 }
 
 /* FOOTER */
@@ -298,32 +294,31 @@ body{
     gap: 48px;
 }
 
-.faq_item{
-    max-width: auto;
-    max-height: auto;
-    display: flex;
-    font-size: 20px;
-    opacity: 1;
-    transition: opacity 0.3s ease;
-}
-
-.faq_item:hover {
-opacity: 1;
-}
-
-.faq_item.not-hovered {
-opacity: 0.7;
-}
-
 .faq_list{
     display: flex;
     align-items: center;
     gap: 0 48px;
 }
 
-.faq{
-    max-width: 961px;
+.faq_item{
     display: flex;
+    position: relative;
+
+    &::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px; /* Высота подчеркивания */
+    background: #000; /* Цвет подчеркивания */
+    transform: scaleX(0); /* Начальное состояние (не видно) */
+    transition: transform 0.8s ease; /* Плавный переход */
+    }
+
+    &:hover::after{
+        transform: scaleX(1);
+    }   
 }
 
 .social{
@@ -331,10 +326,12 @@ opacity: 0.7;
     gap: 0 8px;
     display: flex;
     align-items: center;
+    user-select: none;  
 }
 
 .social_item{
-    max-width: auto;
-    max-height: auto;
-    display: flex;
+    opacity: 1;
+    &:hover{
+        opacity: 0.7;
+    }
 }
